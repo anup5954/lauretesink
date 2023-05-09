@@ -23,14 +23,14 @@
                             @foreach ($subcategories as $subcategory)
                                 <div class="product-box position-relative">
                                     <a
-                                        href="{{ route('product_list', ['main_id' => $subcategory->category_id, 'sub_id' => $subcategory->id]) }}">
+                                        href="{{ route('product_list', ['main_id' => $category->category_slug, 'sub_id' => $subcategory->sub_category_slug]) }}">
                                         <div class="product-img position-relative">
                                             <img
                                                 src="{{ asset('public/uploads/sub-category/' . $subcategory->sub_category_image) }}">
                                             <div class="product-cart-view-hover">
                                                 <div class="product-cart-view">
 
-                                                    <a href="{{ route('product_list', ['main_id' => $subcategory->category_id, 'sub_id' => $subcategory->id]) }}"
+                                                    <a href="{{ route('product_list', ['main_id' => $category->category_slug, 'sub_id' => $subcategory->sub_category_slug]) }}"
                                                         class="btn view-more-product"><i class="fa-light fa-eye"></i></a>
                                                 </div>
                                             </div>

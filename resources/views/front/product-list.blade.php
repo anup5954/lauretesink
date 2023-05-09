@@ -10,7 +10,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Stream Sanitation</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $categories[0]->category_name }}</li>
             </ol>
         </nav>
     </section>
@@ -34,7 +34,7 @@
                                     <ul>
                                         @foreach ($categories as $category)
                                             <li>
-                                                <a href="{{ route('subcategory', $category->id) }}"> <i
+                                                <a href="{{ route('subcategory', $category->category_slug) }}"> <i
                                                         class="fa-light fa-angles-right"></i>
                                                     {{ $category->category_name }}</a>
                                             </li>
@@ -92,11 +92,36 @@
                                 </ul>
                             </div>
                         </div> --}}
+                        <div class="product-sidebar-box">
+                            <div class="heading-section bg-color-dark-1 pt-2 pb-3 px-2">
+                                <h5 class="heading-1 mb-0">Type</h5>
+                            </div>
+                            <div class="product-sidebar-list">
+                                <ul>
 
+                                    <li>
+                                        <label class="checkbox-custom"> Machine Made
+                                            <input type="radio" class="made_by" name="made_by" value="Machinemade">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+
+                                    <li>
+                                        <label class="checkbox-custom"> Handmade Made
+                                            <input type="radio" class="made_by" name="made_by" value="Handmade">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
 
                         <div class="product-sidebar-box">
                             <div class="heading-section bg-color-dark-1 pt-2 pb-3 px-2">
-                                <h5 class="heading-1 mb-0">Size/Dimension</h5>
+                                <h5 class="heading-1 mb-0">Overall Size (Length x Width)</h5>
                             </div>
                             <div class="product-sidebar-list">
                                 <ul>
@@ -124,22 +149,22 @@
                                 <h5 class="heading-1 mb-0">Price</h5>
                             </div>
                             <!-- <div data-role="main" class="ui-content">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <form method="post"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            action="{{ route(Route::currentRouteName(), Route::current()->parameters()) . '?min=100&max=5000' }}">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div data-role="rangeslider">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <input type="range" name="price-min" id="price-min" value="0" min="0"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    max="5000" readonly class="pricerange ">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <input type="range" name="price-max" id="price-max" value="5000" min="0"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    max="5000" readonly class="pricerange ">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <form method="post"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            action="{{ route(Route::currentRouteName(), Route::current()->parameters()) . '?min=100&max=5000' }}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div data-role="rangeslider">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <input type="range" name="price-min" id="price-min" value="0" min="0"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    max="5000" readonly class="pricerange ">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <input type="range" name="price-max" id="price-max" value="5000" min="0"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    max="5000" readonly class="pricerange ">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </form>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </form>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div> -->
 
 
                             <div class="d-flex">
-                                <div class="wrapper">
+                                <div class="wrapper px-3">
 
                                     <div class="price-input">
                                         <div class="field minfield">
@@ -215,16 +240,18 @@
                         @if ($products->count() > 0)
                             @foreach ($products as $product)
                                 <div class="product-box position-relative" id="{{ $product->id }}">
-                                    <a href="{{ route('productdetails', $product->id) }}">
+                                    <a href="{{ route('productdetails', $product->product_slug) }}">
                                         <div class="product-img position-relative">
-                                            <img src="{{ asset('public/uploads/product/' . $product->product_image) }}">
+                                            <img src="{{ asset('public/uploads/product/' . $product->product_image) }}" x>
+                                            <img
+                                                src="{{ asset('public/uploads/product/' . $product->hover_image) }}"class="hoverimg" />
                                             <div class="product-cart-view-hover">
                                                 <div class="product-cart-view">
                                                     <!-- <button href="product-details.php" class="btn add-wishlist-btn"><i class="fa-light fa-heart"></i></button> -->
                                                     <a href="{{ route('productdetails', $product->id) }}"
                                                         class="btn add-to-cart"><i
                                                             class="fa-light fa-cart-shopping"></i></a>
-                                                    <a href="{{ route('productdetails', $product->id) }}"
+                                                    <a href="{{ route('productdetails', $product->product_slug) }}"
                                                         class="btn view-more-product"><i class="fa-light fa-eye"></i></a>
                                                 </div>
                                             </div>
@@ -277,7 +304,7 @@
         </div>
         @php
             $urlData = implode(',', Route::current()->parameters());
-
+            echo $urlData;
         @endphp
 
     </section>
@@ -290,11 +317,11 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function() {
-
             $(document).on("change", "#minPrice", function() {
                 var minValue = $(this).val();
                 var maxValue = $("#maxPrice").val();
                 let size = [];
+                let made_byData = $(".made_by").val();
                 $('input[name="sizeCheckBox[]"]:checked').each(function() {
                     size.push($(this).val());
                 });
@@ -310,16 +337,31 @@
                         "minValue": minValue,
                         "maxValue": maxValue,
                         "categories": "{{ $urlData }}",
-                        "size": size
+                        "size": size,
+                        "made_by": made_byData
+
                     },
                     success: function(response) {
+                        let arrShowIds = [];
+                        for (let i = 0; i < response.length; i++) {
+                            arrShowIds.push(response[i].id);
+                        }
 
+                        $('.product-box').each(function() {
+
+                            if (arrShowIds.includes(parseInt($(this).attr('id')))) {
+                                $(this).css("display", "block");
+                            } else {
+                                $(this).css("display", "none");
+                            }
+                        });
                     }
                 });
             });
             $(document).on("change", "#maxPrice", function() {
                 var minValue = $("#minPrice").val();
                 var maxValue = $(this).val();
+                let made_byData = $(".made_by").val();
                 let size = [];
                 $('input[name="sizeCheckBox[]"]:checked').each(function() {
                     size.push($(this).val());
@@ -336,15 +378,70 @@
                         "minValue": minValue,
                         "maxValue": maxValue,
                         "categories": "{{ $urlData }}",
-                        "size": size
+                        "size": size,
+                        "made_by": made_byData
                     },
                     success: function(response) {
+                        let arrShowIds = [];
+                        for (let i = 0; i < response.length; i++) {
+                            arrShowIds.push(response[i].id);
+                        }
 
+                        $('.product-box').each(function() {
+
+                            if (arrShowIds.includes(parseInt($(this).attr('id')))) {
+                                $(this).css("display", "block");
+                            } else {
+                                $(this).css("display", "none");
+                            }
+                        });
                     }
                 });
             })
             let size = [];
             $(document).on("change", ".sizeCheck", function() {
+                var minValue = $("#minPrice").val();
+                var maxValue = $("#maxPrice").val();
+                let made_byData = $(".made_by").val();
+                size = [];
+                $('input[name="sizeCheckBox[]"]:checked').each(function() {
+                    size.push($(this).val());
+                });
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    method: "POST",
+                    url: "{{ route('minmaxprice') }}",
+                    data: {
+                        "size": size,
+                        "categories": "{{ $urlData }}",
+                        "minValue": minValue,
+                        "maxValue": maxValue,
+                        "made_by": made_byData
+                    },
+                    success: function(response) {
+                        let arrShowIds = [];
+                        for (let i = 0; i < response.length; i++) {
+                            arrShowIds.push(response[i].id);
+                        }
+
+                        $('.product-box').each(function() {
+
+                            if (arrShowIds.includes(parseInt($(this).attr('id')))) {
+                                $(this).css("display", "block");
+                            } else {
+                                $(this).css("display", "none");
+                            }
+                        });
+                    }
+                });
+            });
+
+            $(document).on("click", ".made_by", function() {
+                let made_byData = $(this).val();
                 var minValue = $("#minPrice").val();
                 var maxValue = $("#maxPrice").val();
                 size = [];
@@ -364,12 +461,14 @@
                         "categories": "{{ $urlData }}",
                         "minValue": minValue,
                         "maxValue": maxValue,
+                        "made_by": made_byData
                     },
                     success: function(response) {
                         let arrShowIds = [];
                         for (let i = 0; i < response.length; i++) {
                             arrShowIds.push(response[i].id);
                         }
+
                         $('.product-box').each(function() {
 
                             if (arrShowIds.includes(parseInt($(this).attr('id')))) {
@@ -378,11 +477,9 @@
                                 $(this).css("display", "none");
                             }
                         });
-
-
                     }
                 });
-            })
+            });
 
         });
     </script>

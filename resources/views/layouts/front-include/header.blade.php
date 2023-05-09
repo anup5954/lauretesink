@@ -36,7 +36,7 @@
 
 <header>
 
-    <div class="topheader bg-color-dark-1 py-2">
+    <div class="topheader bg-color-dark-2 py-2">
 
         <div class="container-fluid">
 
@@ -140,12 +140,15 @@
                             <ul>
                                 @if (!empty($categories))
                                     @foreach ($categories as $category)
-                                        <li class=''>
-                                            {{ $category->category_name }}
+                                        <li>
+                                            <a href="{{ route('subcategory', $category->category_slug) }}"
+                                                class="categorieslink">
+                                                {{ $category->category_name }}
+                                            </a>
                                             <div class="subcategories">
                                                 @foreach ($category->subcategories as $subCat)
                                                     <a
-                                                        href="{{ route('product_list', ['main_id' => $subCat->category_id, 'sub_id' => $subCat->id]) }}">
+                                                        href="{{ route('product_list', ['main_id' => $category->category_slug, 'sub_id' => $subCat->sub_category_name]) }}">
                                                         <i class="fa-light fa-angles-right"></i>
                                                         {{ $subCat->sub_category_name }}
                                                     </a>

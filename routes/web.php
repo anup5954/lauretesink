@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontController::class, 'index']);
 //Route::get('/categories/{id?}', [FrontController::class, 'categories'])->name('categories_front');
 Route::match(['GET', 'POST'], '/product-list/{main_id?}/{sub_id?}', [FrontController::class, 'productList'])->name('product_list');
-Route::get('/product/{id}', [FrontController::class, 'productDetails'])->name('productdetails');
+Route::get('/product/{slug}', [FrontController::class, 'productDetails'])->name('productdetails');
 Route::get('/about-us', [FrontController::class, 'aboutUs'])->name('about');
 Route::get('/sub-category/{id}', [FrontController::class, 'subCategoryByCat'])->name('subcategory');
 Route::get('/faqs', [FrontController::class, 'faqs'])->name('faqs');

@@ -144,8 +144,9 @@
             items: 1,
 
             dots: false,
+            nav:true,
 
-            thumbs: true,
+            thumbs: false,
 
             thumbImage: true,
 
@@ -177,7 +178,16 @@
                     items: 4
                 }
             }
-        })
+        });
+
+        $('.blogpostslider').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:true,
+    items:1,
+    
+})
     </script>
     <!--end here categories slider-->
 

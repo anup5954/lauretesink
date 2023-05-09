@@ -1,3 +1,6 @@
+p:empty{
+  display: none;
+}
 /*start here landing  page */
 
 .landing-page-section{
@@ -680,9 +683,9 @@ flex-wrap: wrap;
 
   padding: 10px;
 
-  height: 150px;
+  height: 250px;
 
-  width: 150px;
+  width: 250px;
 
   display: flex;
 
@@ -1143,7 +1146,7 @@ display: flex;
 
 .product-name h6{
 
-font-size: 24px;
+font-size: 18px;
 
 text-transform: uppercase;
 
@@ -1164,7 +1167,7 @@ white-space: nowrap;
 .product-name h5{
 
   font-size: 14px;
-  border:1px solid #bc2c23;
+  /* border:1px solid #bc2c23; */
   margin-top: 15px;
   padding:10px 8px;
   text-transform: uppercase;
@@ -1358,11 +1361,50 @@ font-size:30px;
 
 
 /*Start here blog section*/
+.bloggrid{
+  display: flex;
+  
+  gap:20px;
+  
+}
 
+.blogpostslider .product-box img{
+  width: 100%!important;
+}
+
+.blogpost-categories h3{
+  font-size: 18px;
+}
+
+.blogrightside{
+  width: 30%;
+  margin-bottom: 30px;
+}
+.blogpostbox{
+  
+  border:1px solid #ddd;
+  padding:10px;
+  margin-top: 30px;
+}
+.blogpost-user img{
+height: 100px;
+margin-top: 10px;
+}
+.blogpost-user h6{
+  font-size:18px;
+}
+.blogpost-user p{
+  font-size: 14px;
+}
 .blog-section{
 
 border-top: 1px solid #d8eccc;
 
+}
+
+.blog-details-img{
+  height: 450px;
+  overflow: hidden;
 }
 
 .blog-content{
@@ -1370,6 +1412,8 @@ border-top: 1px solid #d8eccc;
 	margin-top: 20px;
 
 }
+
+
 
 .blog-content h4{
 
@@ -1395,7 +1439,7 @@ overflow: hidden;
 
 .blog-content h6{
 
-	color: #1c2137;
+	color: #777;
 
 	font-size: 12px;
 
@@ -3962,7 +4006,7 @@ height: 100px;
 
     margin-top: 80px;
 
-    background-color: #e0dcd9;
+    background-color: transparent;
 
 }
 
@@ -4117,13 +4161,22 @@ width: 100%;
 .blog-details-content{
 
 margin: 30px 0px;
+border:1px solid #ddd;
+padding:15px!important;
+width: 100%;
 
 }
 
 .blog-details-content h2{
 
-	font-size:30px;
+	font-size:25px;
+  margin-bottom: 15px;
 
+}
+
+.blog-details-content h6{
+  font-size: 12px;
+  color: #777;
 }
 
 

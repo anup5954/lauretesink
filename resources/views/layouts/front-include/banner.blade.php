@@ -8,7 +8,7 @@
 
                             <picture>
                                 <source media="(max-width:767px)"
-                                    srcset="{{ asset('public/uploads/banner/' . $banner->image) }}">
+                                    srcset="{{ asset('public/uploads/banner/' . $banner->mobileimage) }}">
                                 <img src="{{ asset('public/uploads/banner/' . $banner->image) }}"
                                     alt="{{ $banner->image_alt }}" class="img-fluid">
                             </picture>

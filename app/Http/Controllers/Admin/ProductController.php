@@ -96,6 +96,7 @@ class ProductController extends Controller
         $product->tranding_product = ($request->tranding_product) ? 1 : 0;
         $product->new_design = ($request->new_design) ? 1 : 0;
         $product->offer_product = ($request->offer_product) ? 1 : 0;
+        $product->made_by = ($request->made_by) ? $request->made_by : '';
         $product->save();
         return redirect()->route('productadd')->with('success', 'Product saved successfully.');
     }
@@ -192,6 +193,7 @@ class ProductController extends Controller
             $product->tranding_product = ($request->tranding_product) ? 1 : 0;
             $product->new_design = ($request->new_design) ? 1 : 0;
             $product->offer_product = ($request->offer_product) ? 1 : 0;
+            $product->made_by = ($request->made_by) ? $request->made_by : '';
             $product->save();
             return redirect()->route('products')->with('success', 'Product update successfully.');
         } else {

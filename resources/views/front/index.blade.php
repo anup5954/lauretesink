@@ -18,7 +18,8 @@
                 @if (!empty($categories))
                     @foreach ($categories as $category)
                         <div class="item">
-                            <a href="{{ route('subcategory', $category->id) }}" class="categories-list-box text-center">
+                            <a href="{{ route('subcategory', $category->category_slug) }}"
+                                class="categories-list-box text-center">
                                 <div class="categories-img">
                                     <img src="{{ asset('public/uploads/category/' . $category->category_image) }}">
                                 </div>
@@ -67,7 +68,7 @@
                                                         {{ $oProduct->original_price }} </del></h5>
 
                                             </div>
-                                            <a href="{{ route('productdetails', $oProduct->id) }}"
+                                            <a href="{{ route('productdetails', $oProduct->product_slug) }}"
                                                 class="btn border-btn ">View More</a>
                                         </div>
                                     </div>
@@ -96,11 +97,11 @@
                     @foreach ($trendingProducts as $tProduct)
                         <div class="item">
                             <div class="product-box position-relative">
-                                <a href="{{ route('productdetails', $tProduct->id) }}">
+                                <a href="{{ route('productdetails', $tProduct->product_slug) }}">
                                     <div class="product-img position-relative">
                                         <img src="{{ asset('public/uploads/product/' . $tProduct->product_image) }}"
                                             class="actualimg">
-                                        <img src="http://work.websitebyranking.com/wbr/lauretesink/public/uploads/product/1673540487_product_23.jpg"
+                                        <img src="{{ asset('public/uploads/product/' . $tProduct->hover_image) }}"
                                             class="hoverimg" />
                                     </div>
                                     <div class="product-content p-2">
@@ -146,7 +147,7 @@
     <!--end here product slider-->
 
     <!--start here about us-->
-    <section>
+    <section class="bg-light py-5">
         <div class="container">
             <div class="about-grid-section">
                 <div class="about-grid-img">
@@ -219,12 +220,12 @@
                                 @foreach ($newProducts as $nProduct)
                                     <div class="item">
                                         <div class="product-box position-relative">
-                                            <a href="{{ route('productdetails', $nProduct->id) }}">
+                                            <a href="{{ route('productdetails', $nProduct->product_slug) }}">
                                                 <div class="product-img position-relative">
                                                     <img src="{{ asset('public/uploads/product/' . $nProduct->product_image) }}"
                                                         class="actualimg">
-                                                    <img src="http://work.websitebyranking.com/wbr/lauretesink/public/uploads/product/1673540487_product_23.jpg"
-                                                        class="hoverimg" />
+                                                    <img
+                                                        src="{{ asset('public/uploads/product/' . $nProduct->hover_image) }}"class="hoverimg" />
                                                     {{-- <div class="product-cart-view-hover">
                                                         <div class="product-cart-view">
                                                             <button href="product-details.php"

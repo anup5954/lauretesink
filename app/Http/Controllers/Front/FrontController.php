@@ -37,14 +37,17 @@ class FrontController extends Controller
     {
         $products = array();
         $condition = [];
+        $category = Category::where('category_slug', $main_id)->first();
+        $subcategory = SubCategory::where('sub_category_slug', $sub_id)->first();
+
         if (isset($request->search_data) && !empty($request->search_data)) {
             $products = Product::where('product_name', 'like', '%' . $request->search_data . '%')->paginate(20);
         } else {
             if (!empty($main_id) && !empty($sub_id)) {
-                $condition = ['status' => 1, 'category_id' => $main_id, 'sub_category_id' => $sub_id];
+                $condition = ['status' => 1, 'category_id' => $category->id, 'sub_category_id' => $subcategory->id];
                 $products = Product::where($condition)->paginate(20);
             } else {
-                $condition = ['status' => 1, 'category_id' => $main_id];
+                $condition = ['status' => 1, 'category_id' => $category->id];
                 $products = Product::where($condition)->paginate(20);
             }
         }
@@ -55,9 +58,9 @@ class FrontController extends Controller
 
 
 
-    public function productDetails($id)
+    public function productDetails($slug)
     {
-        $product = Product::find($id);
+        $product = Product::where('product_slug', $slug)->first();
         $trendingProducts = Product::where('tranding_product', 1)->where('status', 1)->get();
         return view('front.product-details', compact('product', 'trendingProducts'));
     }
@@ -142,14 +145,15 @@ class FrontController extends Controller
         return view('front.shipping-policy');
     }
 
-    public function subCategoryByCat($id)
+    public function subCategoryByCat($slug)
     {
-        $subcategories = SubCategory::where('category_id', $id)->get();
+        $category = Category::where('category_slug', $slug)->first();
+        $subcategories = SubCategory::where('category_id', $category->id)->get();
         if (count($subcategories) > 0) {
-            $category = Category::find($id);
+            $category = Category::where('category_slug', $slug)->first();
             return view('front.sub-categories', compact('subcategories', 'category'));
         } else {
-            return redirect()->route('product_list', ['main_id' => $id, 'sub_id' => '']);
+            return redirect()->route('product_list', ['main_id' => $category->category_slug, 'sub_id' => '']);
         }
     }
 
@@ -227,6 +231,8 @@ class FrontController extends Controller
 
         $productQuery = "";
         $categories = explode(',', $request->categories);
+        $category = Category::where('category_slug', $categories[0])->first();
+        $subcategory = SubCategory::where('sub_category_slug', $categories[1])->first();
         if (!empty($request->size)) {
             for ($i = 0; $i < count($request->size); $i++) {
                 $sizeExpload = explode(',', $request->size[$i]);
@@ -251,10 +257,14 @@ class FrontController extends Controller
                 $productQuery .=  "SELECT id FROM products where (selling_price between " . $request->minValue . " and " . $request->maxValue . ")";
             }
         }
-        $productQuery .= " and category_id='" . $categories[0] . "'";
-        if (!empty($categories[1])) {
-            $productQuery .= " and sub_category_id='" . $categories[1] . "'";
+        if (!empty($request->made_by)) {
+            $productQuery .= " and made_by='" . $request->made_by . "'";
         }
+        $productQuery .= " and category_id='" . $category->id . "'";
+        if (!empty($subcategory)) {
+            $productQuery .= " and sub_category_id='" . $subcategory->id . "'";
+        }
+
         $products = DB::select($productQuery);
         return $products;
     }

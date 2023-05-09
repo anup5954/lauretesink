@@ -193,6 +193,30 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label class="customcheckbox">Machinemade
+                                                        <input type="radio" value="Machinemade" name="made_by"
+                                                            {{ !empty($product->made_by) && $product->made_by == 'Machinemade' ? 'checked' : '' }}>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label class="customcheckbox">Handmade
+                                                        <input type="radio" value="Handmade" name="made_by"
+                                                            {{ !empty($product->made_by) && $product->made_by == 'Handmade' ? 'checked' : '' }}>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+
+
+
 
                                             <div class="col-md-12 form-group">
                                                 <div class="wdinput">

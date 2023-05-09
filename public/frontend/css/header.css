@@ -28,7 +28,10 @@ header{
 
 
 /*start here section medium header*/
-
+.categorieslink{
+  border-bottom: 0px!important;
+  
+}
 .categories-menu{
 
     background-color:#ddd;
@@ -411,7 +414,7 @@ list-style: none
 #cssmenu > ul > li {
 
   float: left;
-
+position: relative;
 }
 
 #cssmenu.align-center > ul {
@@ -530,14 +533,14 @@ list-style: none
 
     top: 42px;
 
-    width:100%;
+    min-width: 250px;
 
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(10px, auto);
-  padding:0px 15px;
+    grid-auto-rows: minmax(10px, auto); */
+  /* padding:0px 15px; */
 }
 .more-link-postion{
   position: absolute;
@@ -587,14 +590,24 @@ list-style: none
 
   height: auto;
   color:#8f090c;
-  padding-top: 15px;
+  border-bottom: 1px solid #ddd;
+    position: relative;
+}
 
-
+#cssmenu ul li:hover > ul > li:hover .subcategories{
+display: block;
+position: absolute;
+    right: -250px;
+    background-color: #fff;
+    padding-left: 15px;
+    min-width: 250px;
+    top: 0px;
 }
 
 #cssmenu ul li:hover > ul > li .subcategories{
   padding:0px;
-  margin-top: 15px;
+  margin-top:0px;
+  display: none;
 }
 
 #cssmenu ul li:hover > ul > li .subcategories a{

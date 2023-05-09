@@ -6,10 +6,31 @@
 @section('admin-content')
     {{ show_error_msg() }}
     {{ show_success_msg() }}
+    
     <form method="POST" enctype="multipart/form-data" action="{{ route('saveblog') }}">
         @csrf
         <div class="border w-100">
-            <div class="col-md-12 form-group ">
+        <div class="content-wrapper">
+
+        <div class="breadcrumbs-top d-flex align-items-center bg-light mb-3">
+                <div class="breadcrumb-wrapper">
+                    <ol class="breadcrumb bg-transparent mb-0">
+                        <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}"
+                                class="text-decoration-none">Dashboard</a></li>
+                        <li class="breadcrumb-item">Add Blog</li>
+                    </ol>
+                </div>
+                
+                <div class="add-back ml-auto mr-2">
+                    <a href="javascript:history.go(-1)" class="btn text-dark"><i class="fa-solid fa-rotate-left"></i> Go
+                        Back</a>
+                </div>
+            </div>
+            <div class="content-wrapper px-2">
+          
+           
+        <div class="row">
+        <div class="col-xl-8 col-lg-8 col-md-12 form-group ">
                 <div class="row">
 
                     <div class="col-md-12 form-group">
@@ -33,8 +54,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 form-group ">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="wdinput">
@@ -63,7 +82,83 @@
                         </div>
                     </div>
                 </div>
-            </div>
+</div>
+                    
+
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                                    <div class="bg-light border p-2 mr-2 my-2">
+                                        <div class="row">
+                                            <div class="col-md-12 form-group">
+                                                <button class="btn btn-primary w-100">Save</button>
+                                            </div>
+
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label>User Image</label>
+                                                    <input type="file" name="user_image" id="product_image" class="form-control" accept="image/*">
+                                                                                                    </div>
+                                            </div>
+                                            
+
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label>User Name</label>
+                                                    <input type="text" name="original_price" class="form-control" placeholder="Username">
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label>User Description</label>
+                                                    <textarea type="text" name="quantity" class="form-control" placeholder="User Description" cols="5"></textarea>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label class="customcheckbox">Categories
+                                                        <input type="checkbox" name="offer_product">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label class="customcheckbox">Trending Products
+                                                        <input type="checkbox" name="tranding_product">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                                                                    </div>
+                                            </div>
+
+                                            <div class="col-md-12 form-group">
+                                                <div class="wdinput">
+                                                    <label class="customcheckbox">New Designs
+                                                        <input type="checkbox" name="new_design">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                                                                    </div>
+                                            </div>
+
+                                           
+
+                                            
+
+                                            
+
+                                           
+
+
+                                        </div>
+                                    </div>
+                                </div>
+        </div>
+</div>
+       
+           
+      
+           
         </div>
     </form>
 @endsection
