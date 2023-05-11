@@ -22,6 +22,14 @@ class CreateBlogsTable extends Migration
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
             $table->string('meta_keyword')->nullable();
+
+            $table->string('user_image')->nullable();
+            $table->string('user_name')->nullable();
+            $table->text('user_description')->nullable();
+
+            $table->tinyInteger('category')->nullable();
+            $table->tinyInteger('tranding_product')->nullable();
+            $table->tinyInteger('new_design')->nullable();
             $table->timestamps();
         });
     }

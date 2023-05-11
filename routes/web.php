@@ -89,6 +89,15 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin']], functio
     Route::get('/product-delete/{id}', [ProductController::class, 'productDelete'])->name('productdelete');
     Route::get('/sub-cat-by-category', [ProductController::class, 'subCatByCategory'])->name('subcatbycategory');
 
+    Route::get('/product-gallery/{id}', [ProductController::class, 'productGallery'])->name('productgallery');
+
+    Route::post('/save-product-gallery', [ProductController::class, 'saveProductGallery'])->name('saveproductgallery');
+
+    Route::get("/get-product-gallery", [ProductController::class, 'getProductGallery'])->name('getproductgalleryimage');
+
+    Route::post('/delete-product-gallery', [ProductController::class, 'deleteProductGallery'])->name('deleteproductgallery');
+
+
     //Blog Routes
     Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
     Route::get('/add-blog', [BlogController::class, 'blogAdd'])->name('blogAdd');
@@ -110,6 +119,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'isAdmin']], functio
     Route::get('/reviews-delete/{id}', [ReviewsController::class, 'reviewsDelete'])->name('reviewsdelete');
     Route::POST('/save-review', [ReviewsController::class, 'saveReview'])->name('savereview');
     Route::put('/update-review/{id}', [ReviewsController::class, 'updateReview'])->name('updatereview');
+
+
 
 
     // Gallery Routes

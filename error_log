@@ -1,4 +1,0 @@
-[07-Jan-2023 08:37:36 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\Front\FrontController::faqs() in /home1/websiteb/work.websitebyranking.com/wbr/lauretesink/app/Http/Controllers/Front/FrontController.php on line 48
-[07-Jan-2023 08:37:49 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\Front\FrontController::categories() in /home1/websiteb/work.websitebyranking.com/wbr/lauretesink/app/Http/Controllers/Front/FrontController.php on line 48
-[07-Jan-2023 08:38:51 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\Front\FrontController::categories() in /home1/websiteb/work.websitebyranking.com/wbr/lauretesink/app/Http/Controllers/Front/FrontController.php on line 48
-[07-Jan-2023 08:38:53 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\Front\FrontController::categories() in /home1/websiteb/work.websitebyranking.com/wbr/lauretesink/app/Http/Controllers/Front/FrontController.php on line 48

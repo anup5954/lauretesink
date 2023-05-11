@@ -11,6 +11,7 @@ use App\Models\Contact;
 use App\Models\Faq;
 use App\Models\Gallery;
 use App\Models\OrderDetail;
+use App\Models\ProductGallery;
 use App\Models\Review;
 use App\Models\SubCategory;
 use App\Models\subscribe;
@@ -61,8 +62,9 @@ class FrontController extends Controller
     public function productDetails($slug)
     {
         $product = Product::where('product_slug', $slug)->first();
+        $galleryImages = ProductGallery::where('product_id', $product->id)->get();
         $trendingProducts = Product::where('tranding_product', 1)->where('status', 1)->get();
-        return view('front.product-details', compact('product', 'trendingProducts'));
+        return view('front.product-details', compact('product', 'trendingProducts', 'galleryImages'));
     }
 
     public function aboutUs()
@@ -104,10 +106,10 @@ class FrontController extends Controller
 
     public function bloggerdetails($slug)
     {
-
+        $categories = Category::all();
+        $tProducts = Product::where('tranding_product', 1)->get();
         $blog = Blog::where('blog_slug', $slug)->first();
-
-        return view('front.blogger-details', compact('blog'));
+        return view('front.blogger-details', compact('blog', 'categories', 'tProducts'));
     }
 
     public function returnpolicy()

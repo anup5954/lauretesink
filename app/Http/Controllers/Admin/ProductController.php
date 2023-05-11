@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Product;
 use App\Models\Category;
+use App\Models\ProductGallery;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -240,5 +241,47 @@ class ProductController extends Controller
 
         $output .= '</div>';
         echo $output;
+    }
+
+
+    public function productGallery($id)
+    {
+        return view('admin.product.product-gallery', compact('id'));
+    }
+
+    public function saveProductGallery(Request $request)
+    {
+        if ($request->hasFile('file')) {
+            $product_image = $request->file('file');
+            $extension = $product_image->getClientOriginalExtension();
+            $imageName = time() . '_gallery_' . rand(1, 100) . '.' . $extension;
+            $product_image->move(public_path('uploads/productGallery'), $imageName);
+            $gallery = new ProductGallery();
+            $gallery->product_id = $request->product_id;
+            $gallery->product_image = $imageName;
+            $gallery->save();
+        }
+    }
+
+    public function getProductGallery()
+    {
+        $output = '';
+        $images = ProductGallery::all();
+        //return $images;
+        if (!empty($images)) {
+            foreach ($images as $image) {
+                $output .= '<img src="' . asset('public/uploads/productGallery/' . $image->product_image) . '" width="200" class="ml-2 mb-2" style="vertical-align: top;"> <a href="javascript:void(0)"  class="deleteProductGalleryImage" id="' . $image->id . '" ><i class="fa fa-trash text-danger"></i></a>';
+            }
+        }
+        echo $output;
+    }
+
+    public function deleteProductGallery(Request $request)
+    {
+        $image = ProductGallery::find($request->imageId);
+        $imagePath = public_path() . '/uploads/productGallery/' . $image->product_image;
+        $image->delete();
+        File::delete($imagePath);
+        echo "File deleted";
     }
 } // end class

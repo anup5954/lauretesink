@@ -65,6 +65,10 @@
                                                             onclick="return confirm('Are you sure want to delete this?')"
                                                             class="btn bg-transparent"><i
                                                                 class="fa-solid fa-trash-can text-danger"></i> </a>
+
+                                                        <a href="{{ route('productgallery', $product->id) }}"
+                                                            class="btn bg-transparent"><i
+                                                                class="fa-solid fa-images text-danger"></i> </a>
                                                     </div>
                                                 </td>
                                             </tr>

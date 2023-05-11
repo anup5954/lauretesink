@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('admin-title')
-    Admin | Add Product
+    Admin | Blog List
 @endsection
 
 @section('admin-content')

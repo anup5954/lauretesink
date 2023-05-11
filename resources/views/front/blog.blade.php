@@ -50,7 +50,7 @@
                             <div class="blog-content p-2">
                                 <div class="d-flex justify-content-between">
                                     <h6>Anil Bhatt</h6>
-                                <h6>{{ date('F jS, Y', strtotime($blog->created_at)) }}</h6>
+                                    <h6>{{ date('F jS, Y', strtotime($blog->created_at)) }}</h6>
                                 </div>
                                 <h4> {{ $blog->blog_heading }}</h4>
 
