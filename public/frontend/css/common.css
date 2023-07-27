@@ -1,0 +1,946 @@
+/*start here font style*/
+
+
+
+/*start here font-style-1*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.font-style-1{
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/*end here font-style-2*/
+
+
+
+/*end here font style*/
+
+
+
+body{
+
+font-family: 'Poppins', sans-serif!important;  
+
+}
+
+
+
+/*start here bg-color*/
+
+.bg-color-dark-1{
+
+background-color:#bc2c23;
+
+color: #fff;
+
+}
+
+.bg-color-dark-2{
+
+  background-color:#010103;
+
+    color: #fff;
+
+}
+
+.bg-color-light{
+
+  background-color: #aec62c;
+
+}
+
+/*end here bg-color*/
+
+
+
+/*start here text-color*/
+
+.text-dark-color-1{
+
+	color: #333000;
+
+}
+
+.text-light-color-1{
+
+	color: #ECB235;
+
+}
+
+
+
+/*end here text-color*/
+
+/*start here hidden class*/
+
+.hidden{
+
+	display: none;
+
+}
+
+/*end here hidden class*/
+
+/*start here overlaycss*/
+
+.overlaycss{
+
+  position: fixed;
+
+  width: 100%;
+
+  height: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background-color: rgba(0,0,0,0.5);
+
+  z-index:999;
+
+  cursor: pointer;
+
+}
+
+
+
+.deep-overlay {
+
+        background-image: linear-gradient(0deg, #333 66%, hsla(0, 0%, 100%, 0));
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 65%;
+
+    z-index: 2;
+
+    opacity: .25;
+
+}
+
+/*end here overlaycss*/
+
+
+
+/*start here heading section*/
+
+.heading-2{
+
+	font-size: 24px;
+
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 30px;
+
+  color: #333;
+
+}
+
+.heading-2:before{
+
+  position: absolute;
+
+  bottom:-10px;
+
+  content: "";
+
+  left: 0px;
+
+  right: 0px;
+
+  width: 50%;
+
+  height: 3px;
+
+  background-color: #333;
+
+  margin: auto;
+
+
+
+}
+
+
+
+
+
+.heading-3{
+
+  font-size: 40px;
+
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 30px;
+
+  color: #333;
+
+}
+
+.heading-3:before{
+
+  position: absolute;
+
+  bottom:-5px;
+
+  content: "";
+
+  left: 0px;
+
+  width: 50%;
+
+  height: 3px;
+
+  background-color: #333;
+
+
+
+}
+
+
+
+.heading-4{
+
+  font-size: 30px;
+
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #333;
+
+}
+
+
+
+
+
+
+
+.heading-1{
+
+  font-size: 18px;
+
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+}
+
+/* .heading-1:before{
+
+  position: absolute;
+
+  bottom:-5px;
+
+  content: "";
+
+  left: 0px;
+
+  width: 50%;
+
+  height:2px;
+
+  background-color:#333;
+
+} */
+
+/*end here heading section*/
+
+
+
+/*start here form section*/
+
+.btn , .btn:hover , .btn:focus{
+
+  box-shadow: 0 0 0;
+
+}
+
+button , button:hover , button:focus{
+
+	box-shadow: 0 0 0!important;
+
+	outline: none!important;
+
+  border-radius:5px;
+
+  height: 50px;
+
+}
+
+input , input:hover , input:focus{
+
+  box-shadow: 0 0 0!important;
+
+  outline: none!important;
+
+  border-radius: 0px;
+
+  height: 50px;
+
+}
+
+
+
+.border-btn{
+
+  border:1px solid #333;
+
+  color: #333;
+
+  border-radius: 5px;
+
+}
+
+
+
+.add-wishlist-btn , .add-wishlist-btn:hover , .add-wishlist-btn:focus{
+
+  background-color: #fff;
+
+  border:1px solid #ddd;
+
+  border-radius: 0px;
+
+  height: auto;
+
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+
+input::-webkit-inner-spin-button {
+
+  -webkit-appearance: none;
+
+  margin: 0;
+
+}
+
+
+
+/* Firefox */
+
+input[type=number] {
+
+  -moz-appearance: textfield;
+
+}
+
+
+
+textarea , textarea:hover , textarea:focus{
+
+  box-shadow: 0 0 0!important;
+
+  outline: none!important;
+
+  border-radius: 0px;
+
+}
+
+select , select:hover , select:focus{
+
+  box-shadow: 0 0 0!important;
+
+  outline: none!important;
+
+  border-radius: 0px;
+
+  height: 50px;
+
+}
+
+/*end here form section*/
+
+/*start here breadcumb*/
+
+.breadcrumb{
+
+  border-radius: 0px;
+
+  margin-bottom: 0px;
+
+}
+
+.breadcrumb-item a{
+
+  color: #333;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+}
+
+/*end here breadcumb*/
+
+
+
+/*start here checkbox*/
+
+.checkbox-custom {
+
+  display: block;
+
+  position: relative;
+
+  padding-left: 35px;
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+
+}
+
+
+
+/* Hide the browser's default checkbox */
+
+.checkbox-custom input {
+
+  position: absolute;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  height: 0;
+
+  width: 0;
+
+}
+
+
+
+/* Create a custom checkbox */
+
+.checkbox-custom .checkmark {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 25px;
+
+  width: 25px;
+
+  background-color: #fff;
+
+  border:1px solid #d8eccc;
+
+}
+
+
+
+
+
+
+
+/* When the checkbox is checked, add a blue background */
+
+.checkbox-custom input:checked ~ .checkmark {
+
+  border:1px solid #ddd;
+
+  background-color: #fff;
+
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkbox-custom .checkmark:after {
+
+  content: "";
+
+  position: absolute;
+
+  display: none;
+
+}
+
+
+
+/* Show the checkmark when checked */
+
+.checkbox-custom input:checked ~ .checkmark:after {
+
+  display: block;
+
+}
+
+
+
+/* Style the checkmark/indicator */
+
+.checkbox-custom .checkmark:after {
+
+  left: 9px;
+
+  top: 5px;
+
+  width: 5px;
+
+  height: 10px;
+
+  border: solid #666;
+
+  border-width: 0 3px 3px 0;
+
+  -webkit-transform: rotate(45deg);
+
+  -ms-transform: rotate(45deg);
+
+  transform: rotate(45deg);
+
+}
+
+/*end here checkbox*/
+
+
+
+/*start here radio btn*/
+
+.radio-btn {
+
+  display: block;
+
+  position: relative;
+
+  padding-left:24px;
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+
+}
+
+
+
+/* Hide the browser's default radio button */
+
+.radio-btn input {
+
+  position: absolute;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+}
+
+
+
+/* Create a custom radio button */
+
+.radio-btn .checkmark {
+
+  position: absolute;
+
+  top: 1px;
+
+  left: 0;
+
+  height: 20px;
+
+  width: 20px;
+
+  background-color:#333;
+
+  border-radius: 50%;
+
+}
+
+
+
+/* On mouse-over, add a grey background color */
+
+.radio-btn:hover input ~ .checkmark {
+
+  background-color: #ccc;
+
+}
+
+
+
+/* When the radio button is checked, add a blue background */
+
+.radio-btn input:checked ~ .checkmark {
+
+  background-color: #333;
+
+}
+
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.radio-btn .checkmark:after {
+
+  content: "";
+
+  position: absolute;
+
+  display: none;
+
+}
+
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.radio-btn input:checked ~ .checkmark:after {
+
+  display: block;
+
+}
+
+
+
+/* Style the indicator (dot/circle) */
+
+.radio-btn .checkmark:after {
+
+  top: 6px;
+
+  left: 6px;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #e0dcd9;
+
+}
+
+/*end here radio btn*/
+
+
+
+/*start here reviews*/
+
+.star-reviews {
+
+  color: #a2b4c3!important;
+
+  margin-bottom: 15px;
+
+}
+
+/*end here reviews*/
+
+
+
+
+
+/*start here popup section*/
+
+.popup-pnl{
+
+   display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  grid-auto-rows: minmax(100px, auto);
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.popup-close{
+
+  font-weight: normal;
+
+}
+
+
+
+.popup-content{
+
+  margin-top: 30px;
+
+}
+
+.popup-content h4{
+
+      margin-bottom: 20px;
+
+    font-size: 30px;
+
+    text-shadow: 1px 1px #ffba43;
+
+    color:#333;
+
+}
+
+
+
+.popup-content form{
+
+  margin-top: 30px;
+
+}
+
+
+
+.popup-content form button{
+
+position: absolute;
+
+right: 0px;
+
+top: 0px;
+
+border-radius: 0px 5px 5px 0px;
+
+}
+
+
+
+.popup-content h5{
+
+  margin-bottom: 20px;
+
+  font-size:24px;
+
+  text-shadow: 1px 1px #ffba43;
+
+  color:#333;
+
+}
+
+.popup-close{
+
+  text-align: center;
+
+  float: none;
+
+  font-size: 14px;
+
+  margin-top: 30px;
+
+  text-decoration: underline;
+
+  color:#333;
+
+  opacity: 1;
+
+}
+
+/*end here popup section*/
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+  .heading-1{
+
+    font-size: 16px;
+
+  }
+
+
+
+  .popup-img-sec{
+
+    display: none;
+
+  }
+
+  .popup-pnl{
+
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+}
+
+
+
+/**/
+
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 10px 0 15px;
+}
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+}
+.field input {
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  margin-left: 12px;
+  border-radius: 5px;
+  border:none;
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.price-input .separator {
+  width: 130px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  height: 5px;
+    position: relative;
+    background: #ddd;
+    border-radius: 5px;
+    width: 95%;
+    left: 7px;
+    top: -15px;
+
+}
+.slider .progress {
+  height: 100%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  border-radius: 5px;
+  background: #bc2c23;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -21px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #bc2c23;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #bc2c23;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Support */
+.support-box {
+  top: 2rem;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  display: block;
+}
+.b-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.b-btn.paypal i {
+  color: blue;
+}
+.b-btn:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+.b-btn i {
+  font-size: 20px;
+  color: yellow;
+  margin-top: 2rem;
+}
+.price-input .minfield{
+position: relative;
+}
+.price-input .minfield:before{
+  content: "₹";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+}
+
+.price-input .maxfield{
+  position: relative;
+  }
+  .price-input .maxfield:before{
+    content: "₹";
+      position: absolute;
+      right:60px;
+      top: 10px;
+  
+  }
+.price-input input{
+  padding-left: 10px;
+  padding-right: 15px;
+}

@@ -1,0 +1,10 @@
+Details Page 
+- product add krte waqt koi filed rhejaati hai to page refresh ho jata hai jisse pura dubara bharna padta hai 
+- Product enquiries - URl add
+- Other platform img add with url backend
+- Handmad and 304 add 
+- Product details par pdf icon video icon agr hum dale na to icon show bhi na ho
+- Home page Popup enquires image change base
+- Footer show categories 
+- Filter issue 
+

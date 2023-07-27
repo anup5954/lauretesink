@@ -1,0 +1,1058 @@
+
+
+.admin-logo img{
+
+    height: 40px;
+
+}
+
+.reviewimg{
+
+    height: 50px;
+
+}
+
+.pip{
+
+    position: relative;
+
+    padding: 10px;
+
+    border:1px solid #ddd;
+
+    margin-top: 15px; 
+
+}
+
+.pip img{
+
+    width: 100%;
+
+    margin-top: 10px;
+
+}
+
+
+
+.remove{
+
+    background-color: #dc3545;
+
+    color: #fff;
+
+    position: absolute;
+
+    top: 0px;
+
+    right: 0px;
+
+    padding: 10px;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+.filelabel {
+
+    width: 100%;
+
+    border: 2px dashed grey;
+
+    border-radius: 5px;
+
+    display: block;
+
+    padding: 5px;
+
+    transition: border 300ms ease;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    margin: 0;
+
+}
+
+.filelabel i {
+
+    display: block;
+
+    font-size: 18px;
+
+    padding-bottom: 5px;
+
+}
+
+
+
+
+
+
+
+.FileUpload{
+
+    display:none;
+
+}
+
+
+
+
+
+.submit-button{
+
+      position: sticky;
+
+    top: 60px;
+
+    left: 0px;
+
+    right: 0px;
+
+    margin-bottom: 15px;
+
+    z-index: 999;
+
+}
+
+
+
+
+
+.main-container-section {
+
+    margin-left: 330px;
+
+    margin-right: 15px;
+
+}
+
+
+
+.top-header-sec{
+
+    position: sticky;
+
+    top: 0px;
+
+    z-index: 9
+
+}
+
+
+
+
+
+
+
+.header-dropdown{
+
+    position: absolute;
+
+    transform: translate3d(-72px, 26px, 0px)!important;
+
+    top: 0px;
+
+    left: 0px;
+
+    will-change: transform;
+
+    right: 0!important;
+
+}
+
+
+
+.header-dropdown a{
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+
+.header-dropdown a{
+
+    border-bottom:none;
+
+}
+
+
+
+.main-section{
+
+	display: flex;
+
+}
+
+
+
+.admin-main-section{
+
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+
+
+/*start custom form attribut field*/
+
+.btn , .btn:hover , .btn:focus{
+
+	box-shadow: 0 0 0;
+
+}
+
+.required{
+
+	color: #dc3545;
+
+}
+
+input , input:hover , input:focus{
+
+	box-shadow: 0 0 0!important;
+
+	border: 1px solid #ced4da;
+
+	outline: none;
+
+	height: 40px;
+
+}
+
+.wdinput{
+  position: relative;
+}
+
+.wdinput label{
+
+	font-weight: 600;
+
+    font-size:12px;
+
+}
+
+
+
+.btn-price{
+
+    font-size: 20px;
+
+}
+
+
+
+textarea , textarea:hover , textarea:focus{
+
+	box-shadow: 0 0 0!important;
+
+	border: 1px solid #ced4da;
+
+	outline: none;
+
+}
+
+select , select:hover, select:focus{
+
+	box-shadow: 0 0 0!important;
+
+	border: 1px solid #ced4da;
+
+	outline: none;
+
+	
+
+}
+
+.wdinput .dropdown {
+
+	border: 1px solid #ced4da!important;
+
+	width: 100%!important;
+
+	background-color: #fff!important;
+
+	color: #495057!important;
+
+}
+
+
+
+.wdinput  .dropdown button{
+
+background-color: #fff!important;
+
+color: #495057!important;
+
+}
+
+/*end custom form attribut field*/
+
+
+
+/*start here product details*/
+
+.price-grid-pnl{
+
+    overflow: hidden;
+
+    overflow-x: scroll;
+
+}
+
+.price-grid-box{
+
+    width: 100px;
+
+}
+
+.price-grid{
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+.price-grid:last-child{
+
+    border-bottom: none;
+
+}
+
+
+
+.price-grid{
+
+    display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 10px;
+
+  grid-auto-rows: minmax(10px, auto);
+
+}
+
+
+
+.product-details-information{
+
+	display: flex;
+
+}
+
+.product-detail-main{
+
+	width: 70%;
+
+	
+
+}
+
+.product-detail-sidebar{
+
+	width: 30%;
+
+	margin-left:10px;
+
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+	background-color: #f5f5f5;	
+
+	padding: 10px;
+
+
+
+	
+
+}
+
+.product-detail-row{
+
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+	background-color: #fff;	
+
+}
+
+
+
+/*start here product img*/
+
+.preview-images-zone {
+
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    min-height: 180px;
+
+    /* display: flex; */
+
+    padding: 5px 5px 0px 5px;
+
+    position: relative;
+
+    overflow:auto;
+
+}
+
+
+
+.preview-images-zone > .preview-image {
+
+    height: 150px;
+
+    width: 150px;
+
+    position: relative;
+
+    margin-right: 5px;
+
+    float: left;
+
+    margin-bottom: 5px;
+
+}
+
+.preview-images-zone > .preview-image > .image-zone {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.preview-images-zone > .preview-image > .image-zone > img {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.preview-images-zone > .preview-image > .tools-edit-image {
+
+    position: absolute;
+
+    z-index: 100;
+
+    color: #fff;
+
+    bottom: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+    display: none;
+
+}
+
+.preview-images-zone > .preview-image > .image-cancel {
+
+    font-size: 18px;
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    font-weight: bold;
+
+    margin-right: 10px;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 100;
+
+}
+
+.preview-image:hover > .image-zone {
+
+    cursor: move;
+
+    opacity: .5;
+
+}
+
+.preview-image:hover > .tools-edit-image,
+
+.preview-image:hover > .image-cancel {
+
+    display: block;
+
+}
+
+.ui-sortable-helper {
+
+    width: 90px !important;
+
+    height: 90px !important;
+
+}
+
+
+
+.image-cancel{
+
+	color: #dc3545;
+
+	background-color: #fff;
+
+	padding:5px;
+
+	border-radius: 5px;
+
+	font-weight: 700;
+
+}
+
+
+
+
+
+/*end here product img*/
+
+
+
+.day-step{
+
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;	
+
+}
+
+
+
+/*end here product details*/
+
+
+
+#dayAccordion h5 button{
+
+  color: #333;
+
+    font-weight: 600;
+
+    display: block;
+
+    width: 100%;
+
+    text-align: left;
+
+    text-decoration: none;
+
+}
+
+
+
+#dayAccordion .card-header{
+
+    padding-left: 0px;
+
+}
+
+
+
+#dayAccordion .card-header:hover{
+
+    background-color: #ddd;
+
+}
+
+
+
+#dayAccordion .card{
+
+    padding: 10px;
+
+}
+
+
+
+.open li{
+
+    background-color: #f5f5f5;
+
+}
+
+
+
+.open li ul li{
+
+    background-color: #fff;
+
+}
+
+.das-card-body{
+
+    text-align: center;
+
+  
+
+}
+
+
+
+.das-card-body span{
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+}
+
+
+
+.das-card-body i , .das-card-body svg{
+
+    font-size: 30px;
+
+    color: #007bff!important;
+
+    margin-bottom: 10px;
+
+    display: block;
+
+}
+
+
+
+.more-enquires ul{
+
+padding-left: 0px;
+
+list-style: none
+
+}
+
+.more-enquires ul li{
+
+    padding: 10px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+.more-enquires li span{
+
+    display: block;
+
+    font-weight: bold;
+
+}
+
+.checkboxinput label{
+
+    display: block;
+
+}
+
+.checkboxinput input{
+
+height: auto!important;
+
+}
+
+
+
+
+
+
+
+  .center {
+
+    display:inline;
+
+    margin: 3px;
+
+  }
+
+ 
+
+
+
+  .form-input input {
+
+    display:none;
+
+  }
+
+  .form-input label {
+
+    display:block;
+
+    width:100%;
+
+    height: auto;
+
+    max-height: 100px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    position: relative;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+  }
+
+  
+
+  .form-input img {
+
+    height:70px;
+
+    margin: 2px;
+
+  }
+
+
+
+  .imgRemove , .imgRemove:focus , .imgRemove:hover{
+
+    position: absolute;
+
+    bottom:0px;
+
+    right:0px;
+
+    border: none;
+
+    outline: none;
+
+    box-shadow: 0 0 0 ;
+
+    border: none;
+
+    background-color: #ddd;
+
+
+
+  }
+
+  .imgRemove::after{
+
+        content: "\f2ed";
+
+    color: #dc3545;
+
+    font-weight: 900;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: "Font Awesome 6 Pro";
+
+        font-size: 15px;
+
+  }
+
+
+
+  .small{
+
+    color: #fff;
+
+  }
+
+
+
+
+
+  .admin-checkbox {
+
+  display: block;
+
+  position: relative;
+
+  padding-left: 35px;
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+
+  font-size: 16px!important;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+
+  font-weight: normal;
+
+}
+
+
+
+/* Hide the browser's default checkbox */
+
+.admin-checkbox input {
+
+  position: absolute;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  height: 0;
+
+  width: 0;
+
+}
+
+
+
+/* Create a custom checkbox */
+
+.admin-checkbox .checkmark {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 25px;
+
+  width: 25px;
+
+  background-color: #fff;
+
+  border: 1px solid #333;
+
+}
+
+
+
+
+
+
+
+/* When the checkbox is checked, add a blue background */
+
+.admin-checkbox input:checked ~ .checkmark {
+
+  background-color: #fff;
+
+}
+
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.admin-checkbox .checkmark:after {
+
+  content: "";
+
+  position: absolute;
+
+  display: none;
+
+}
+
+
+
+/* Show the checkmark when checked */
+
+.admin-checkbox input:checked ~ .checkmark:after {
+
+  display: block;
+
+}
+
+
+
+/* Style the checkmark/indicator */
+
+.admin-checkbox .checkmark:after {
+
+  left: 9px;
+
+  top: 5px;
+
+  width: 5px;
+
+  height: 10px;
+
+  border: solid black;
+
+  border-width: 0 3px 3px 0;
+
+  -webkit-transform: rotate(45deg);
+
+  -ms-transform: rotate(45deg);
+
+  transform: rotate(45deg);
+
+}
+
+
+
+  @media only screen and (max-width: 700px){
+
+    .image-upload-container{
+
+      grid-template-areas: 'img-u-one img-u-two img-u-three'
+
+       'img-u-four img-u-five img-u-six';
+
+    }
+
+  }
+
+
+
+  .hover-img label{
+
+     max-height:100%;
+
+  }
+
+
+
+  .hover-img img{
+
+   height: 300px;
+
+  }
+
+
+  /* The container */
+.customcheckbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px!important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .customcheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border:1px solid #666;
+  }
+
+ .checkmark.checkmark-raido-btn{
+  border-radius: 50%;
+ }
+
+ .checkmark.checkmark-raido-btn:after{
+width: 8px;
+height: 8px;
+border-radius: 50%;
+border-width: 5px;
+left: 7px;
+    top: 7px;
+ }
+  
+
+  
+  /* When the checkbox is checked, add a blue background */
+  .customcheckbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .customcheckbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .customcheckbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .selectsize{
+    position: absolute;
+    right: 2px;
+    top: 31px;
+    width: 80px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 ;
+  }
+
+  .selectsize:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 ;
+  }
+
+  .selectsize:hover{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 ;
+  }
+
+  .Announcementbarform{
+    position: relative;
+  }
+
+  .Announcementbarform button{
+    position: absolute;
+    top: 0px;
+    right:0px;
+    border-radius: 0px;
+    height: 100%;
+  }
+
+  .border-top-sec{
+    border-top: 1px solid #ddd;
+    width: 95%;
+    margin:10px auto;
+  }
