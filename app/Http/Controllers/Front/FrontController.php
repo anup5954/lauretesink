@@ -44,6 +44,7 @@ class FrontController extends Controller
         $category = Category::where('category_slug', $main_id)->first();
         $subcategory = SubCategory::where('sub_category_slug', $sub_id)->first();
 
+        $max_selling_price = Product::select('selling_price')->max('selling_price');
         if (isset($request->search_data) && !empty($request->search_data)) {
             $products = Product::where('product_name', 'like', '%' . $request->search_data . '%')->paginate(20);
         } else {
@@ -57,7 +58,7 @@ class FrontController extends Controller
         }
         $categories = Category::where('status', 1)->get();
 
-        return view('front.product-list', compact('products', 'categories'));
+        return view('front.product-list', compact('products', 'categories', 'max_selling_price'));
     }
 
 

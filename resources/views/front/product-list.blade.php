@@ -138,17 +138,18 @@
                                             <input type="number" class="input-min text-left" value="0">
                                         </div>
                                         <div class="field maxfield">
-                                            <input type="number" class="input-max text-right" value="100000">
+                                            <input type="number" class="input-max text-right"
+                                                value="{{ $max_selling_price }}">
                                         </div>
                                     </div>
                                     <div class="slider">
                                         <div class="progress"></div>
                                     </div>
                                     <div class="range-input">
-                                        <input type="range" class="range-min" id="minPrice" min="0" max="100000"
-                                            value="0" step="100">
-                                        <input type="range" class="range-max" id="maxPrice" min="0" max="100000"
-                                            value="100000" step="100">
+                                        <input type="range" class="range-min" id="minPrice" min="0"
+                                            max="{{ $max_selling_price }}" value="0" step="100">
+                                        <input type="range" class="range-max" id="maxPrice" min="0"
+                                            max="{{ $max_selling_price }}" value="{{ $max_selling_price }}" step="100">
                                     </div>
                                 </div>
 
@@ -228,7 +229,7 @@
                         </div>
                     @endif
                     <!-- <button class="btn productmenu d-lg-none d-xl-none d-inline-block" id="productmenu"><i
-                                                                                                                                                                                                            class="fa-light fa-bars"></i></button> -->
+                                                                                                                                                                                                                class="fa-light fa-bars"></i></button> -->
                 </div>
 
             </div>
