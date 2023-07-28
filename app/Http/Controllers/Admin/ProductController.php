@@ -201,7 +201,7 @@ class ProductController extends Controller
                 $product_image->move(public_path('uploads/product'), $productImageName);
                 File::delete($imagePath);
             } else {
-                $productImageName = $request->hide_product_image;
+                $productImageName = $product->product_image;
             }
 
             $productHoverImageName = '';
@@ -211,7 +211,7 @@ class ProductController extends Controller
                 $productHoverImageName = time() . '_product_hover_' . rand(1, 100) . '.' . $extension;
                 $product_image->move(public_path('uploads/product'), $productHoverImageName);
             } else {
-                $productHoverImageName = $request->hide_hover_image;
+                $productHoverImageName = $product->hover_image;
             }
 
             $productDocumentName = '';
@@ -221,7 +221,7 @@ class ProductController extends Controller
                 $productDocumentName = time() . '_product_document_' . rand(1, 100) . '.' . $extension;
                 $product_image->move(public_path('uploads/product'), $productDocumentName);
             } else {
-                $productDocumentName = $request->product_document;
+                $productDocumentName = $product->product_document;
             }
 
 

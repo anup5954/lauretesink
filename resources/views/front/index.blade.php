@@ -54,11 +54,12 @@
                                             <h6>{{ $oProduct->product_name }} </h6>
                                         </div>
                                         <div class="offer-content-sec text-center">
-                                            <!-- <div class="product-name py-2">
-
-                                                            <h4><span>Size ({{ $oProduct->product_unit }}) :
-                                                                </span>{{ $oProduct->product_size }} </h4>
-                                                        </div> -->
+                                            @if (!empty($oProduct->product_size))
+                                                <div class="product-name py-2">
+                                                    <h4><span>Size ({{ $oProduct->product_unit }}) :
+                                                        </span>{{ $oProduct->product_size }} </h4>
+                                                </div>
+                                            @endif
 
                                             <div class=" product-price d-flex justify-content-center align-items-center">
                                                 <h5 class=" actual-price"><i class="rupeed-icon">
@@ -107,8 +108,10 @@
                                     <div class="product-content p-2">
                                         <div class="product-name py-2">
                                             <h6>{{ $tProduct->product_name }}</h6>
-                                            <h5><span>Size ({{ $tProduct->product_unit }}) :
-                                                </span>{{ $tProduct->product_size }} </h5>
+                                            @if (!empty($oProduct->product_size))
+                                                <h5><span>Size ({{ $tProduct->product_unit }}) :
+                                                    </span>{{ $tProduct->product_size }} </h5>
+                                            @endif
                                         </div>
                                     </div>
                                 </a>

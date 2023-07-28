@@ -26,14 +26,20 @@
             {{ show_success_msg() }}
             <div class="product-details-flex position-relative mb-5">
                 <div class="product-right-section position-relative">
+
                     <div class="ready-to-wishlist">
-                        <h6 class="ready-to-ship  mb-0 mr-3"><i class="fa-light fa-truck"></i></h6>
-                        <a target="_blank"
-                            href="{{ !empty($product->product_document) ? asset('public/uploads/product/' . $product->product_document) : 'javascript:void(0)' }}"
-                            class="ready-to-ship mb-0 mr-3"><i class="fa-regular fa-file-pdf"></i></a>
-                        <a href="#videopopup" class="ready-to-ship mb-0 mr-3" data-toggle="modal"
-                            data-target="#videopopup"><i class="fa-regular fa-video"></i></a>
+                        {{-- <h6 class="ready-to-ship  mb-0 mr-3"><i class="fa-light fa-truck"></i></h6> --}}
+                        @if (!empty($product->product_document))
+                            <a target="_blank"
+                                href="{{ !empty($product->product_document) ? asset('public/uploads/product/' . $product->product_document) : 'javascript:void(0)' }}"
+                                class="ready-to-ship mb-0 mr-3"><i class="fa-regular fa-file-pdf"></i></a>
+                        @endif
+                        @if (!empty($product->youtube_link))
+                            <a href="#videopopup" class="ready-to-ship mb-0 mr-3" data-toggle="modal"
+                                data-target="#videopopup"><i class="fa-regular fa-video"></i></a>
+                        @endif
                     </div>
+
 
                     <div class="owl-carousel owl-theme" id="productsliderdetail">
 
@@ -397,7 +403,6 @@
                                     </div>
 
                                 </div>
-
 
                                 <div class="product-review-discount">
                                     @if (!empty($tProduct->made_by))

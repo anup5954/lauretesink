@@ -186,8 +186,10 @@
                                         <div class="product-content p-2">
                                             <div class="product-name py-2">
                                                 <h6>{{ $product->product_name }}</h6>
-                                                <h5><span>Size ({{ $product->product_unit }}) :
-                                                    </span>{{ $product->product_size }} </h5>
+                                                @if (!empty($product->product_size))
+                                                    <h5><span>Size ({{ $product->product_unit }}) :
+                                                        </span>{{ $product->product_size }} </h5>
+                                                @endif
                                             </div>
                                         </div>
                                     </a>
@@ -226,7 +228,7 @@
                         </div>
                     @endif
                     <!-- <button class="btn productmenu d-lg-none d-xl-none d-inline-block" id="productmenu"><i
-                                                                                                                                                                                                        class="fa-light fa-bars"></i></button> -->
+                                                                                                                                                                                                            class="fa-light fa-bars"></i></button> -->
                 </div>
 
             </div>
