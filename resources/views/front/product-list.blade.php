@@ -5,6 +5,7 @@
 
 
 @section('front-content')
+
     <!--start here breadcumb-section-->
     <section class="breadcumb-section">
         <nav aria-label="breadcrumb">
@@ -137,17 +138,17 @@
                                             <input type="number" class="input-min text-left" value="0">
                                         </div>
                                         <div class="field maxfield">
-                                            <input type="number" class="input-max text-right" value="10000">
+                                            <input type="number" class="input-max text-right" value="100000">
                                         </div>
                                     </div>
                                     <div class="slider">
                                         <div class="progress"></div>
                                     </div>
                                     <div class="range-input">
-                                        <input type="range" class="range-min" id="minPrice" min="0" max="10000"
+                                        <input type="range" class="range-min" id="minPrice" min="0" max="100000"
                                             value="0" step="100">
-                                        <input type="range" class="range-max" id="maxPrice" min="0" max="10000"
-                                            value="10000" step="100">
+                                        <input type="range" class="range-max" id="maxPrice" min="0" max="100000"
+                                            value="100000" step="100">
                                     </div>
                                 </div>
 
@@ -161,8 +162,8 @@
                     </aside>
                 @endif
                 <div class="main-product-section position-relative">
-                    <div class="product-grid-section">
 
+                    <div class="product-grid-section">
                         @if ($products->count() > 0)
                             @foreach ($products as $product)
                                 <div class="product-box position-relative" id="{{ $product->id }}">
@@ -225,7 +226,7 @@
                         </div>
                     @endif
                     <!-- <button class="btn productmenu d-lg-none d-xl-none d-inline-block" id="productmenu"><i
-                                                                    class="fa-light fa-bars"></i></button> -->
+                                                                                                                                                                                                        class="fa-light fa-bars"></i></button> -->
                 </div>
 
             </div>
@@ -233,7 +234,6 @@
         </div>
         @php
             $urlData = implode(',', Route::current()->parameters());
-            
         @endphp
 
     </section>
@@ -252,7 +252,7 @@
                 let size = [];
                 var made_byData = "";
                 if ($(".made_by").is(':checked')) {
-                    made_byData = $(".made_by").val();
+                    made_byData = $('input[name = "made_by"]:checked').val();
                 }
                 $('input[name="sizeCheckBox[]"]:checked').each(function() {
                     size.push($(this).val());
@@ -295,7 +295,7 @@
                 var maxValue = $(this).val();
                 var made_byData = "";
                 if ($(".made_by").is(':checked')) {
-                    made_byData = $(".made_by").val();
+                    made_byData = $('input[name = "made_by"]:checked').val();
                 }
                 let size = [];
                 $('input[name="sizeCheckBox[]"]:checked').each(function() {
@@ -339,7 +339,7 @@
                 var maxValue = $("#maxPrice").val();
                 var made_byData = "";
                 if ($(".made_by").is(':checked')) {
-                    made_byData = $(".made_by").val();
+                    made_byData = $('input[name = "made_by"]:checked').val();
                 }
                 size = [];
                 $('input[name="sizeCheckBox[]"]:checked').each(function() {
@@ -380,9 +380,10 @@
 
             $(document).on("click", ".made_by", function() {
                 var made_byData = "";
-                if ($(".made_by").is(':checked')) {
-                    made_byData = $(".made_by").val();
+                if ($(this).is(':checked')) {
+                    made_byData = $('input[name = "made_by"]:checked').val();
                 }
+                //alert(made_byData);
                 var minValue = $("#minPrice").val();
                 var maxValue = $("#maxPrice").val();
                 size = [];

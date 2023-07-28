@@ -53,7 +53,7 @@
                                     <td>{{ $order->product_price }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Product Size</th>
+                                    <th>Page Url</th>
                                     <td>{{ $order->product_size }}</td>
                                 </tr>
                                 <tr>

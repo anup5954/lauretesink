@@ -181,7 +181,7 @@ class FrontController extends Controller
         $product = Product::find($id);
         if (!empty($product)) {
             if ($product->selling_price != $request->product_price) {
-                return redirect()->route('productdetails', $id)->with('error', 'Something went worng');
+                return redirect()->route('productdetails', $product->product_slug)->with('error', 'Something went worng');
             } else {
                 $order = new OrderDetail();
                 $order->product_id      = $id;
@@ -193,10 +193,10 @@ class FrontController extends Controller
                 $order->mobile          = $request->mobile;
                 $order->message         = $request->detailsmessage;
                 $order->save();
-                return redirect()->route('productdetails', $id)->with('success', 'Order Placed Successfully');
+                return redirect()->route('productdetails', $product->product_slug)->with('success', 'Order Placed Successfully');
             }
         } else {
-            return redirect()->route('productdetails', $id)->with('error', 'Something went worng');
+            return redirect()->route('productdetails', $product->product_slug)->with('error', 'Something went worng');
         }
     }
 
@@ -265,6 +265,7 @@ class FrontController extends Controller
                 $productQuery .=  "SELECT id FROM products where (selling_price between " . $request->minValue . " and " . $request->maxValue . ")";
             }
         }
+        //print_r($request->made_by);
         if (!empty($request->made_by)) {
             $productQuery .= " and made_by='" . $request->made_by . "'";
         }

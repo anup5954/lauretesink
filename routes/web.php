@@ -47,7 +47,7 @@ Route::get('/cancellation-policy', [FrontController::class, 'cancellationpolicy'
 Route::get('/blog', [FrontController::class, 'blog'])->name('blog');
 Route::get('/blogger-details/{slug}', [FrontController::class, 'bloggerdetails'])->name('blogger');
 
-Route::put('/save-order/{id}', [FrontController::class, 'saveOrder'])->name('saveorder');
+Route::put('/save-order/{slug}', [FrontController::class, 'saveOrder'])->name('saveorder');
 Route::post('/save-contact', [FrontController::class, 'saveContact'])->name('savecontact');
 //subscribe_email
 Route::post('/save-subscribe-email', [FrontController::class, 'saveSubscribeEmail'])->name('savesubscribeemail');

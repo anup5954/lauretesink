@@ -68,8 +68,12 @@
                         </h2>
                         <p>{!! $product->short_description !!}</p>
                         <ul>
-                            <li>{{ $product->made_by }}</li>
-                            <li>{{ $product->product_type }}</li>
+                            @if (!empty($product->made_by))
+                                <li>{{ $product->made_by }}</li>
+                            @endif
+                            @if (!empty($product->product_type))
+                                <li>{{ $product->product_type }}</li>
+                            @endif
                         </ul>
 
 
@@ -107,18 +111,26 @@
 
                         <div class="otherplatform">
                             <div class="otherplatformlink">
-                                <a href="{{ $product->platform_link1 }}">
-                                    <img src="{{ asset('public/uploads/product/' . $product->platform_image1) }}" />
-                                </a>
-                                <a href="{{ $product->platform_link2 }}">
-                                    <img src="{{ asset('public/uploads/product/' . $product->platform_image2) }}" />
-                                </a>
-                                <a href="{{ $product->platform_link3 }}">
-                                    <img src="{{ asset('public/uploads/product/' . $product->platform_image3) }}" />
-                                </a>
-                                <a href="{{ $product->platform_link4 }}">
-                                    <img src="{{ asset('public/uploads/product/' . $product->platform_image4) }}" />
-                                </a>
+                                @if (!empty($product->platform_link1))
+                                    <a target="_blank" href="{{ $product->platform_link1 }}">
+                                        <img src="{{ asset('public/uploads/product/' . $product->platform_image1) }}" />
+                                    </a>
+                                @endif
+                                @if (!empty($product->platform_link2))
+                                    <a target="_blank" href="{{ $product->platform_link2 }}">
+                                        <img src="{{ asset('public/uploads/product/' . $product->platform_image2) }}" />
+                                    </a>
+                                @endif
+                                @if (!empty($product->platform_link3))
+                                    <a target="_blank" href="{{ $product->platform_link3 }}">
+                                        <img src="{{ asset('public/uploads/product/' . $product->platform_image3) }}" />
+                                    </a>
+                                @endif
+                                @if (!empty($product->platform_link3))
+                                    <a target="_blank" href="{{ $product->platform_link4 }}">
+                                        <img src="{{ asset('public/uploads/product/' . $product->platform_image4) }}" />
+                                    </a>
+                                @endif
                             </div>
                         </div>
 
@@ -432,9 +444,9 @@
                     value="{{ $product->selling_price }}" readonly>
             </div>
             <div class="wdinput form-group">
-                <label>Product Size</label>
+                <label>Page Url</label>
                 <input type="text" placeholder="Enter Product Price" class="form-control" name="product_size"
-                    value="{{ $product->product_unit . '-' . $product->product_size }}" readonly>
+                    value="{{ url()->current() }}" readonly>
             </div>
             <div class="wdinput form-group">
                 <label>Full Name</label>
