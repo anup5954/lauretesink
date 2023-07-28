@@ -35,6 +35,7 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Mobile</th>
+                                        <th>Category</th>
                                         <th>Message</th>
                                         <th>Action</th>
                                     </tr>
@@ -47,6 +48,7 @@
                                                 <td>{{ $enquiry->name }}</td>
                                                 <td>{{ $enquiry->email }}</td>
                                                 <td>{{ $enquiry->phone }}</td>
+                                                <td>{{ $enquiry->category }}</td>
                                                 <td>{{ $enquiry->message }}</td>
 
                                                 <td>

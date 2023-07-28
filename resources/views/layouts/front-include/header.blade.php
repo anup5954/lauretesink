@@ -241,8 +241,11 @@
                             <div class="col-12">
                                 <div class="wdinput form-group">
                                     <select class="form-control" name="category" required>
-                                        <option value="Single Bowl">Single Bowl</option>
-                                        <option value="Double Bowl">Double Bowl</option>
+                                        <option value="">Select Category</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->category_name }}">
+                                                {{ $category->category_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
